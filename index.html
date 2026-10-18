@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hoja de vida interactiva de Valeria Christen Fernández Álvarez, estudiante de Ingeniería de Sistemas en la UCB San Pablo.">
+    <title>Valeria Fernández | Hoja de Vida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="js/preload.js"></script>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <!-- Enlace de salto directo para navegación -->
+    <a href="#main_content" class="skip_link">Saltar al Contenido Principal</a>
+
+    <!-- Encabezado Personal -->
+    <header class="site_header">
+        <button id="theme_toggle" type="button" class="theme_toggle" aria-pressed="false"
+            aria-label="Modo oscuro">
+            <img id="theme_toggle_icon" src="assets/images/icons/moon.svg" alt="" width="22" height="22">
+        </button>
+
+        <img class="header_photo" src="assets/images/foto-profesional.png"
+            alt="Fotografía profesional de Valeria Christen Fernández Álvarez" width="260" height="260">
+        <p class="badge_disponible">Disponible para prácticas profesionales</p>
+
+        <h1>Valeria Christen Fernández Álvarez</h1>
+        <p class="header_subtitle">· Estudiante de Ingeniería de Sistemas ·</p>
+        <p class="header_quote"><small>"Construyendo puentes entre la tecnología emergente y el sector social."</small></p>
+
+        <address>
+            La Paz, Bolivia<br>
+            Correo Personal: <a href="mailto:valeria.fernalva@gmail.com">valeria.fernalva@gmail.com</a><br>
+            Correo Institucional: <a href="mailto:valeria.fernalva@ucb.edu.bo">valeria.fernalva@ucb.edu.bo</a><br>
+            Teléfono: <a href="tel:+59169982797">+591 69982797</a>
+        </address>
+
+        <p class="header_actions">
+            <a class="btn btn_primary" href="assets/documents/valeria-fernandez-resume.pdf" download
+                aria-label="Descargar el currículum de Valeria Fernández en formato PDF">
+                ¡Aquí puedes descargar mi currículum en PDF!
+            </a>
+            <a class="btn btn_outline" href="https://github.com/ValFernAlvarez" target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar el perfil de GitHub de Valeria Fernández (se abre en una pestaña nueva)">
+                GitHub: github.com/ValFernAlvarez
+            </a>
+        </p>
+
+        <nav class="site_nav" aria-label="Navegación principal de la hoja de vida">
+            <button id="menu_toggle" class="menu_toggle" type="button" aria-expanded="false"
+                aria-controls="menu_principal" aria-label="Menú de navegación">Menú</button>
+            <ul id="menu_principal" class="nav_list">
+                <li><a href="#perfil">Perfil Profesional</a></li>
+                <li><a href="#formacion">Formación Académica</a></li>
+                <li><a href="#experiencia">Experiencia Profesional</a></li>
+                <li><a href="#habilidades">Habilidades Técnicas</a></li>
+                <li><a href="#certificaciones">Certificaciones y Cursos</a></li>
+                <li><a href="#idiomas">Idiomas</a></li>
+                <li><a href="#proyectos">Proyectos Destacados</a></li>
+                <li><a href="#github">Actividad en GitHub</a></li>
+                <li><a href="#multimedia">Portafolio Multimedia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main id="main_content">
+
+        <!-- B. Perfil Profesional -->
+        <section id="perfil" aria-labelledby="perfil_heading">
+            <h2 id="perfil_heading">Perfil Profesional</h2>
+
+            <article>
+                <h3>Presentación Personal</h3>
+                <p>
+                    Soy una estudiante <strong>boliviano-estadounidense</strong> de Ingeniería de Sistemas en la
+                    Universidad Católica Boliviana "San Pablo", enfocada en cerrar la brecha entre la
+                    <em>tecnología</em> y el <em>impacto comunitario</em>. Completé mi educación primaria en Florida,
+                    Estados Unidos, antes de trasladarme a Bolivia, lo que me da una perspectiva bicultural que
+                    enriquece tanto mi formación técnica como mi comprensión de las necesidades comunitarias en
+                    distintos contextos.
+                </p>
+                <p>
+                    Al trabajar de cerca con organizaciones sociales y programas comunitarios en Bolivia, identifiqué
+                    que las iniciativas con mayor compromiso solían estar limitadas no por falta de liderazgo, sino
+                    por el <mark>acceso limitado a herramientas técnicas y conocimiento de sistemas</mark> necesario
+                    para escalar su impacto. Esa observación guía mi dirección académica y profesional.
+                </p>
+
+                <h3>Fortalezas principales</h3>
+                <ul>
+                    <li><strong>Liderazgo estudiantil temprano.</strong></li>
+                    <li><strong>Perspectiva bicultural y bilingüe</strong> (Bolivia y Estados Unidos), útil para
+                        comunicar ideas técnicas a audiencias diversas.</li>
+                    <li><strong>Pensamiento analítico</strong> propio de la ingeniería, combinado con sensibilidad
+                        social y comunitaria.</li>
+                    <li><strong><em>Reconocimiento académico a nivel nacional</em></strong>, incluyendo un Reconocimiento
+                        Parlamentario de la Asamblea Legislativa Plurinacional de Bolivia.</li>
+                </ul>
+
+                <h3>Objetivo profesional</h3>
+                <p>
+                    Desarrollarme como <strong>Ingeniera de Sistemas</strong> con un fuerte componente de innovación
+                    social, adquiriendo las <mark>competencias técnicas y de gestión de proyectos</mark> necesarias para diseñar
+                    soluciones tecnológicas que fortalezcan a organizaciones e iniciativas de impacto comunitario en
+                    Bolivia y la región.
+                </p>
+            </article>
+
+            <aside aria-labelledby="destacados_heading">
+                <h3 id="destacados_heading">Reconocimientos destacados</h3>
+                <ol>
+                    <li><time datetime="2024-06">Junio 2024</time> — 1er lugar, categoría Impacto Social STEAM,
+                        competencia internacional Geeky Latin@s (puntaje 9.80/10).</li>
+                    <li><time datetime="2024">2024</time> — Mejor egresada (Valedictorian), Colegio Desmaissieres,
+                        promedio 98%.</li>
+                    <li><time datetime="2024-12">Diciembre 2024</time> — Reconocimiento Parlamentario, Asamblea
+                        Legislativa Plurinacional de Bolivia.</li>
+                    <li>Top 12 finalista, "Academia del Saber" (competencia académica nacional televisada,
+                        Temporada 1).</li>
+                </ol>
+            </aside>
+        </section>
+
+        <!-- C. Fromación Académica -->
+        <section id="formacion" aria-labelledby="formacion_heading">
+            <h2 id="formacion_heading">Formación Académica</h2>
+
+            <article>
+                <h3>Ingeniería de Sistemas (en curso)</h3>
+                <p>Universidad Católica Boliviana "San Pablo" — La Paz, Bolivia</p>
+                <p><time datetime="2025">2025</time> – <time datetime="2026">Presente</time></p>
+                <p>Grado a obtener: Licenciatura en Ingeniería de Sistemas (en curso).</p>
+                <p>
+                    Beca Bachiller Plata (beca al mérito académico), otorgada por desempeño sobresaliente en
+                    secundaria y un puntaje destacado en el examen de admisión.
+                </p>
+                <p>
+                    Progreso estimado de la carrera:<br>
+                    <progress value="4" max="9"
+                        aria-label="Progreso de la carrera de Ingeniería de Sistemas: 4 de 9 semestres">4 de 9
+                        semestres</progress>
+                </p>
+            </article>
+
+            <article>
+                <h3>Bachiller en Humanidades</h3>
+                <p>Colegio Desmaissieres R.R. Adoratrices — La Paz, Bolivia</p>
+                <p><time datetime="2014">2014</time> – <time datetime="2024">2024</time></p>
+                <p>Grado obtenido: Bachiller. <strong>Mejor egresada (Valedictorian)</strong>, con un promedio general
+                    del 98%.</p>
+            </article>
+        </section>
+
+        <!-- D. Experiencia Profesional y Liderazgo -->
+        <section id="experiencia" aria-labelledby="experiencia_heading">
+            <h2 id="experiencia_heading">Experiencia Profesional y Liderazgo</h2>
+
+            <article>
+                <h3>Encargada de Mantenimiento Web</h3>
+                <p>Arzobispado de La Paz · La Paz, Bolivia</p>
+                <p><time datetime="2026">2026</time> – <time datetime="2026">Presente</time></p>
+                <p><strong>Funciones:</strong> mantenimiento y actualización del sitio web institucional del Arzobispado de La Paz.</p>
+                <p><strong>Logro principal:</strong> actualización y mejora del diseño del sitio web.</p>
+            </article>
+
+            <article>
+                <h3>Líder de Taller — IEEE Women in Engineering, Rama Estudiantil UCB</h3>
+                <p>Universidad Católica Boliviana "San Pablo" · La Paz, Bolivia</p>
+                <p><time datetime="2025">2025</time> – <time datetime="2026">Presente</time></p>
+                <p><strong>Funciones:</strong> coordinar y facilitar actividades de la rama estudiantil de IEEE WIE
+                    durante un taller.</p>
+                <p><strong>Logro principal:</strong> facilitó el taller <em>"Un Día Siendo Ingeniera"</em>, dirigido a
+                    inspirar a niñas en carreras STEM (<time datetime="2025-11">noviembre de 2025</time>).</p>
+            </article>
+
+            <article>
+                <h3>Vocal — Consejo de Representación Universitaria Estudiantil (CRUE)</h3>
+                <p>Universidad Católica Boliviana "San Pablo" · La Paz, Bolivia</p>
+                <p><time datetime="2025">2025</time> – <time datetime="2026">Presente</time></p>
+                <p><strong>Funciones:</strong> representar los intereses del estudiantado y participar en la toma de
+                    decisiones institucionales del consejo de gobierno de la universidad.</p>
+                <p><strong>Logro principal:</strong> electa como vocal estudiantil por el cuerpo estudiantil
+                    de la UCB San Pablo.</p>
+            </article>
+
+            <article>
+                <h3>Voluntaria de Cuidado Animal (Catovoluntariado)</h3>
+                <p>Centro de Rescate Animal Laika · La Paz, Bolivia</p>
+                <p><time datetime="2025-01">Primer semestre de 2025</time> · 66 horas</p>
+                <p><strong>Funciones:</strong> cuidado, alimentación y bienestar de animales rescatados en el centro.</p>
+                <p><strong>Logro principal:</strong> reconocimiento <em>"Conexión Especial"</em> por dedicación
+                    destacada a la misión de bienestar animal (<time datetime="2025-06">junio de 2025</time>).</p>
+            </article>
+
+            <article>
+                <h3>Miembro del Jurado — Feria Contra la Violencia</h3>
+                <p>Colegio Desmaissieres R.R. Adoratrices · La Paz, Bolivia</p>
+                <p><time datetime="2022-10">Octubre de 2022</time></p>
+                <p><strong>Funciones:</strong> evaluadora oficial del proyecto estudiantil "Proceso de
+                    Despatriarcalización por una Vida Libre de Violencia", designada por la Dirección Académica.</p>
+                <p><strong>Logro principal:</strong> designación como evaluadora oficial en reconocimiento a su
+                    desempeño académico sobresaliente.</p>
+            </article>
+        </section>
+
+        <!-- E. Habilidades Técnicas y Profesionales -->
+        <section id="habilidades" aria-labelledby="habilidades_heading">
+            <h2 id="habilidades_heading">Habilidades Técnicas y Profesionales</h2>
+
+            <h3>Lenguajes y tecnologías</h3>
+            <ul>
+
+                <li>HTML5 —
+                    <meter min="0" max="10" value="6" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en HTML5: intermedio">6/10</meter>
+                </li>
+                <li>CSS3 —
+                    <meter min="0" max="10" value="4" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en CSS3: basico">4/10</meter>
+                </li>
+                <li>Java —
+                    <meter min="0" max="10" value="8" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en Java: intermedio">8/10</meter>
+                </li>
+                <li>Python —
+                    <meter min="0" max="10" value="8" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en Python: intermedio">8/10</meter>
+                </li>
+                <li>C++ —
+                    <meter min="0" max="10" value="7" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en C++: intermedio">7/10</meter>
+                </li>
+            </ul>
+
+            <h3>Herramientas y software</h3>
+            <ul>
+                <li>Microsoft Office —
+                    <meter min="0" max="10" value="7" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en Microsoft Office: avanzado">7/10</meter>
+                </li>
+                <li>Microsoft PowerPoint —
+                    <meter min="0" max="10" value="8" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en PowerPoint: avanzado">8/10</meter>
+                </li>
+                <li>Canva —
+                    <meter min="0" max="10" value="6" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en Canva: intermedio">6/10</meter>
+                </li>
+                <li>MediBang Illustrator —
+                    <meter min="0" max="10" value="8" low="4" high="8" optimum="10"
+                        aria-label="Nivel de dominio en MediBang Illustrator: avanzado">8/10</meter>
+                </li>
+            </ul>
+
+            <h3>Habilidades profesionales</h3>
+            <ul>
+                <li>Liderazgo estudiantil y trabajo en equipo.</li>
+                <li>Comunicación bilingüe (español e inglés).</li>
+                <li>Pensamiento analítico y resolución de problemas.</li>
+                <li>Diseño y comunicación visual.</li>
+            </ul>
+        </section>
+
+        <!-- F. Certificaciones, Cursos y Talleres -->
+        <section id="certificaciones" aria-labelledby="certificaciones_heading">
+            <h2 id="certificaciones_heading">Certificaciones, Cursos y Talleres</h2>
+
+            <ul>
+                <li><time datetime="2020-11">Noviembre de 2020</time> — <strong>Graphic Design Elements for
+                        Non-Designers</strong>, University of Colorado Boulder (curso en línea). Calificación final:
+                    97%.</li>
+                <li><time datetime="2021-04">Abril de 2021</time> — <strong>Beca de Marketing Digital</strong>, Save
+                    the Children / Instituto de la Juventud. Programa competitivo sobre redes sociales, SEO y email
+                    marketing.</li>
+                <li><time datetime="2021-07">Julio de 2021</time> — <strong>Bootcamp de Tecnología e
+                        Innovación</strong> "Programando soluciones para el mundo", UNICEF / AGETIC Bolivia. 30 horas
+                    académicas sobre desarrollo de aplicaciones móviles y emprendimiento.</li>
+                <li><time datetime="2023-01">Enero</time>–<time datetime="2023-06">junio de 2023</time> —
+                    <strong>El Semillero Estudiantil</strong>, programa apoyado por Youth Ambassadors &amp; World
+                    Learning.
+                </li>
+                <li><time datetime="2023-09">Septiembre de 2023</time> — <strong>Futures Week / Construyendo Futuros
+                        2030</strong>, UNIFRANZ &amp; The Millennium Project. Programa internacional sobre
+                    pensamiento de futuros y desarrollo global.</li>
+                <li><time datetime="2024-02">Febrero</time>–<time datetime="2024-06">junio de 2024</time> —
+                    <strong>Geeky Latin@s, Programa Virtual STEAM (7.ª edición)</strong>. 26 horas académicas;
+                    desarrollo del proyecto Ecoguardianes.
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- G. Idiomas -->
+        <section id="idiomas" aria-labelledby="idiomas_heading">
+            <h2 id="idiomas_heading">Idiomas</h2>
+            <table>
+                <caption><strong>Nivel de dominio por idioma</strong></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Idioma</th>
+                        <th scope="col">Lectura</th>
+                        <th scope="col">Escritura</th>
+                        <th scope="col">Conversación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Español</th>
+                        <td>Nativo</td>
+                        <td>Nativo</td>
+                        <td>Nativo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Inglés</th>
+                        <td>Nativo</td>
+                        <td>Nativo</td>
+                        <td>Nativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- H. Proyectos Destacados -->
+        <section id="proyectos" aria-labelledby="proyectos_heading">
+            <h2 id="proyectos_heading">Proyectos Destacados</h2>
+
+            <form id="form_buscador" class="project_search" role="search" aria-label="Buscar proyectos">
+                <label for="buscador_proyectos">Buscar por nombre, tecnología o rol:</label>
+                <input type="search" id="buscador_proyectos" name="busqueda" autocomplete="off"
+                    placeholder="Ej. Python, Canva, JavaScript…" aria-controls="lista_proyectos">
+                <p id="resumen_busqueda" class="search_summary" role="status" aria-live="polite"></p>
+            </form>
+
+            <p id="proyectos_vacio" class="empty_state" role="status" hidden>
+                No se encontraron proyectos con ese criterio. Prueba con otra palabra.
+            </p>
+
+            <ul id="lista_proyectos" class="project_list">
+                <li><noscript>Activa JavaScript para ver y filtrar los proyectos destacados.</noscript></li>
+            </ul>
+        </section>
+
+        <!-- H2. Actividad en GitHub (Fetch API) -->
+        <section id="github" aria-labelledby="github_heading">
+            <h2 id="github_heading">Actividad en GitHub</h2>
+            <p>Perfil y repositorios recientes consultados en vivo desde la API REST pública de GitHub.</p>
+
+            <p id="github_status" class="api_status" role="status" aria-live="polite" hidden></p>
+
+            <article id="github_profile" class="github_profile" aria-label="Perfil de GitHub" hidden></article>
+
+            <ul id="github_repos" class="repo_list" aria-label="Repositorios recientes"></ul>
+        </section>
+
+        <!-- I. Portafolio Multimedia -->
+        <section id="multimedia" aria-labelledby="multimedia_heading">
+            <h2 id="multimedia_heading">Portafolio Multimedia</h2>
+
+            <article>
+                <h3>Fotografía profesional</h3>
+                <figure class="figure_circle">
+                    <img class="photo_circle" src="assets/images/foto-profesional.png"
+                        alt="Fotografía profesional de Valeria Fernández Álvarez" width="231" height="308">
+                    <figcaption>Figura 1: Fotografía profesional utilizada en el encabezado de esta hoja de vida.
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Presentación en audio</h3>
+                <p>Breve presentación personal en formato de audio:</p>
+                <figure>
+                    <audio controls preload="metadata"
+                        aria-label="Presentación personal en audio de Valeria Fernández Álvarez">
+                        <source src="assets/audio/presentacion.mp3" type="audio/mpeg">
+                    </audio>
+                    <figcaption>Audio 1: Presentación personal</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Imagen de EcoGuardianes</h3>
+                <figure>
+                    <img src="assets/images/ecoguardianes.png"
+                        alt="Imagen representativa del proyecto Ecoguardianes" width="330" height="231">
+                    <figcaption>Figura 2: Imagen representativa del proyecto Ecoguardianes.</figcaption>
+                </figure>
+
+                <details>
+                    <summary>Ver más sobre este proyecto</summary>
+                    <p>Ecoguardianes fue desarrollado entre febrero y junio de 2024 como parte del programa Geeky
+                        Latin@s, un espacio virtual STEAM enfocado en empoderar a minorías. El proyecto obtuvo el
+                        primer lugar en la categoría de Impacto Social STEAM, con un puntaje de 9.80/10.</p>
+                </details>
+            </article>
+
+            <article class="video_showcase">
+                <h3>Video de proyecto</h3>
+                <p>Video relacionado con un proyecto de Presentación Personal:</p>
+                <figure>
+                    <video controls width="720" preload="metadata"
+                        aria-label="Video relacionado con una presentación personal de Valeria Fernández">
+                        <source src="assets/video/presentacion-personal.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Video 1: Presentación del proyecto</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- AVISO EMERGENTE NATIVO (DIALOG) -->
+        <section id="aviso" aria-labelledby="aviso_heading">
+            <h2 id="aviso_heading">Información Rápida (Elemento Nativo)</h2>
+
+            <dialog open aria-modal="false" aria-labelledby="dialog_contacto_title"
+                aria-describedby="dialog_contacto_desc">
+                <h3 id="dialog_contacto_title">Información rápida de contacto</h3>
+                <p id="dialog_contacto_desc">
+                    Puedes escribirme directamente a
+                    <a href="mailto:valeria.fernalva@gmail.com">valeria.fernalva@gmail.com</a>
+                    o llamarme al <a href="tel:+59169982797">+591 69982797</a>. También puedes completar el
+                    formulario en la sección de contacto.
+                </p>
+                <form method="dialog">
+                    <button type="submit" aria-label="Cerrar aviso de información rápida">Entendido / Cerrar</button>
+                </form>
+            </dialog>
+        </section>
+
+        <!-- J. Contacto -->
+        <section id="contacto" aria-labelledby="contacto_heading">
+            <h2 id="contacto_heading">Formulario de Contacto</h2>
+            <p>¿Quieres conversar sobre una oportunidad, colaboración o mentoría? Completa el siguiente formulario:
+            </p>
+
+            <form action="#" method="post" id="form_contacto" novalidate>
+
+                <fieldset>
+                    <legend><strong>Datos de contacto</strong></legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo (*):</label>
+                        <input type="text" id="nombre" name="nombre" required
+                            minlength="3" maxlength="60" placeholder="Ej. Valeria Fernández"
+                            aria-describedby="nombre_error">
+                        <small class="field_message" id="nombre_error" aria-live="polite"></small>
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico (*):</label>
+                        <input type="email" id="correo" name="correo" required
+                            placeholder="correo@ejemplo.com" aria-describedby="correo_error">
+                        <small class="field_message" id="correo_error" aria-live="polite"></small>
+                    </p>
+
+                    <p>
+                        <label for="telefono">Teléfono (*):</label>
+                        <input type="tel" id="telefono" name="telefono" required
+                            aria-describedby="telefono_help telefono_error" placeholder="+591 70000000"
+                            pattern="(\+591|591)?\s?[67][0-9]{7}">
+                        <small id="telefono_help">Formato: número celular boliviano de 8 dígitos (ej. +591
+                            70000000).</small>
+                        <small class="field_message" id="telefono_error" aria-live="polite"></small>
+                    </p>
+
+                    <p>
+                        <label for="motivo">Motivo de contacto (*):</label>
+                        <select id="motivo" name="motivo" required aria-describedby="motivo_error">
+                            <option value="" disabled selected>-- Selecciona un motivo --</option>
+                            <option value="oportunidad-laboral">Oportunidad laboral</option>
+                            <option value="colaboracion">Colaboración en proyecto</option>
+                            <option value="mentoria">Mentoría / consulta académica</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <small class="field_message" id="motivo_error" aria-live="polite"></small>
+                    </p>
+
+                    <p>
+                        <label for="fecha_respuesta">Fecha preferida de respuesta (opcional):</label>
+                        <input type="date" id="fecha_respuesta" name="fecha_respuesta"
+                            aria-describedby="fecha_help fecha_respuesta_error">
+                        <small id="fecha_help">Elige una fecha desde hoy hasta dentro de un año.</small>
+                        <small class="field_message" id="fecha_respuesta_error" aria-live="polite"></small>
+                    </p>
+
+                    <p class="field_wide">
+                        <label for="mensaje">Mensaje (*):</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" cols="40" required
+                            minlength="10" maxlength="500" placeholder="Escribe tu mensaje aquí..."
+                            aria-describedby="mensaje_error"></textarea>
+                        <small class="field_message" id="mensaje_error" aria-live="polite"></small>
+                    </p>
+
+                    <p class="field_wide">
+                        <input type="checkbox" id="aceptacion" name="aceptacion" required
+                            aria-describedby="aceptacion_error">
+                        <label for="aceptacion">Acepto que mis datos sean utilizados únicamente para responder a
+                            este mensaje (*)</label>
+                        <small class="field_message" id="aceptacion_error" aria-live="polite"></small>
+                    </p>
+                </fieldset>
+
+                <p class="form_actions">
+                    <button type="submit"><strong>Enviar Mensaje</strong></button>
+                    <button type="reset">Limpiar Formulario</button>
+                </p>
+
+                <p class="form_status" id="form_status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site_footer">
+        <p><small>&copy; 2026 Valeria Christen Fernández Álvarez. Todos los derechos reservados.</small></p>
+        <p><small>Hoja de vida desarrollada como proyecto académico utilizando HTML5 semántico, CSS3 propio
+                (sin frameworks) y JavaScript nativo (sin librerías).</small></p>
+        <p><small>Última actualización del documento:
+                <time datetime="2026-10-18">Octubre de 2026</time>.</small></p>
+    </footer>
+
+    <script src="js/utils/storage.js" defer></script>
+    <script src="js/utils/dom.js" defer></script>
+    <script src="js/data/projects.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/filter.js" defer></script>
+    <script src="js/contactForm.js" defer></script>
+    <script src="js/githubApi.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
