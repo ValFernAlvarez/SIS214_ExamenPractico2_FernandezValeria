@@ -71,7 +71,3 @@ Los estilos base son los de móvil; se amplían con `min-width`:
 ### Accesibilidad
 
 `lang="es"`, enlace "Saltar al contenido", `aria-label`, `aria-expanded`, `aria-controls`, `aria-pressed`, `aria-live`, `aria-invalid`, `role="search"`/`status`/`alert`, foco visible, `prefers-reduced-motion`. Sin `<div>` ni `<span>`: todo el marcado usa elementos semánticos.
-
-## Despliegue en GitHub Pages
-
-*Settings → Pages → Source: Deploy from a branch → Branch: `main` / `(root)`*. Las rutas son relativas, por lo que funciona bajo `/SIS214_ExamenPractico2_FernandezValeria/`.
