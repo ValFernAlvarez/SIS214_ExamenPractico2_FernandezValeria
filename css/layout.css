@@ -1,0 +1,395 @@
+/* ==========================================================================
+   layout.css — Maquetación general: encabezado, navegación, secciones y pie
+   Estrategia mobile-first con tres rangos:
+     · Móvil:    estilos base (< 768px)
+     · Tablet:   768px – 1024px
+     · Escritorio: > 1024px
+   Flexbox → alineaciones unidimensionales (navegación, acciones, chips)
+   CSS Grid → esquemas bidimensionales (encabezado, tarjetas, multimedia)
+   ========================================================================== */
+
+/* 1. ENCABEZADO PERSONAL (móvil: columna centrada con Flexbox) */
+.site_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: var(--content-width);
+    margin: var(--spacing-unit) auto;
+    padding: var(--spacing-lg);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.theme_toggle {
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    padding: 0.65rem;
+    background-color: var(--color-periwinkle-soft);
+    color: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-dark);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.theme_toggle:hover,
+.theme_toggle:focus-visible {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--color-on-accent);
+}
+
+.theme_toggle img {
+    display: block;
+}
+
+.header_photo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-accent-soft);
+    box-shadow: var(--shadow-md);
+}
+
+.badge_disponible {
+    width: 100%;
+    max-width: 260px;
+    margin: var(--spacing-unit) 0 0;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--color-on-accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+}
+
+.header_subtitle {
+    margin-bottom: 0.5rem;
+}
+
+.header_quote {
+    color: var(--color-text-muted);
+}
+
+.site_header address {
+    margin: var(--spacing-unit) 0;
+    font-style: normal;
+    color: var(--color-text-muted);
+    overflow-wrap: anywhere;
+}
+
+.header_actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 1.25rem 0 0;
+}
+
+/* 2. NAVEGACIÓN — menú hamburguesa en móvil/tablet, lista en escritorio */
+.site_nav {
+    width: 100%;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-unit);
+    border-top: 1px solid var(--color-border);
+}
+
+.menu_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-unit);
+    width: 100%;
+    padding: 0.7rem var(--spacing-unit);
+    background-color: var(--color-periwinkle);
+    color: var(--color-primary-dark);
+    border: none;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu_toggle:hover,
+.menu_toggle:focus-visible,
+.menu_toggle[aria-expanded="true"] {
+    background-color: var(--secondary-color);
+    color: var(--color-on-accent);
+}
+
+/* Ícono hamburguesa dibujado con CSS (sin <span> ni imágenes) */
+.menu_toggle::after {
+    content: "";
+    flex: none;
+    width: 22px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+    box-shadow: 0 -7px 0 currentColor, 0 7px 0 currentColor;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Al abrirse el menú, el ícono se transforma en una "X" */
+.menu_toggle[aria-expanded="true"]::after {
+    background-color: transparent;
+    box-shadow: none;
+    background-image:
+        linear-gradient(currentColor, currentColor),
+        linear-gradient(currentColor, currentColor);
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: var(--spacing-sm) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* El menú sólo se colapsa si JavaScript está activo (mejora progresiva) */
+.js .nav_list:not(.is_open) {
+    display: none;
+}
+
+.nav_list a {
+    display: block;
+    padding: 0.6rem var(--spacing-unit);
+    background-color: var(--color-periwinkle);
+    color: var(--color-primary-dark);
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.nav_list a:hover,
+.nav_list a:focus-visible {
+    background-color: var(--secondary-color);
+    color: var(--color-on-accent);
+    transform: translateY(-2px);
+}
+
+/* 3. CONTENIDO PRINCIPAL */
+main {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+main > section {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* 4. SECCIONES CON REJILLA (móvil: una columna) */
+#proyectos,
+#github {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-unit);
+    align-content: start;
+    padding: var(--spacing-lg) var(--spacing-unit);
+    border-radius: var(--radius-lg);
+}
+
+#proyectos {
+    background-color: var(--color-panel-dark);
+}
+
+#github {
+    background-color: var(--color-periwinkle-soft);
+}
+
+#proyectos h2 {
+    color: var(--color-panel-text);
+}
+
+#proyectos h2::before {
+    background-color: var(--color-rose);
+}
+
+.project_list,
+.repo_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-unit);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#multimedia {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: stretch;
+}
+
+#multimedia h2,
+.video_showcase {
+    grid-column: 1 / -1;
+}
+
+#certificaciones {
+    padding: var(--spacing-lg) var(--spacing-unit) var(--spacing-unit);
+    background-color: var(--color-rose-soft);
+    border-radius: var(--radius-lg);
+}
+
+/* 5. PIE DE PÁGINA */
+.site_footer {
+    max-width: var(--content-width);
+    margin: 0 auto var(--spacing-xl);
+    padding: var(--spacing-lg) var(--spacing-unit);
+    background-color: var(--color-panel-dark);
+    color: var(--color-panel-text);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.site_footer a {
+    color: var(--color-panel-text);
+    text-decoration-color: var(--color-accent-soft);
+}
+
+.site_footer a:hover,
+.site_footer a:focus {
+    color: var(--color-accent-soft);
+}
+
+/* ==========================================================================
+   TABLET (768px – 1024px) y superiores
+   ========================================================================== */
+@media (min-width: 768px) {
+    .site_header {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        column-gap: var(--spacing-xl);
+        align-items: start;
+        padding: var(--spacing-xl);
+        text-align: left;
+    }
+
+    .theme_toggle {
+        grid-column: 1 / -1;
+        justify-self: start;
+        align-self: auto;
+    }
+
+    .header_photo {
+        grid-column: 1;
+        grid-row: 2 / span 4;
+        width: 220px;
+        height: 220px;
+    }
+
+    .badge_disponible {
+        grid-column: 1;
+        grid-row: 6;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .site_header h1,
+    .header_subtitle,
+    .header_quote,
+    .site_header address,
+    .header_actions {
+        grid-column: 2;
+    }
+
+    .header_actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    .site_nav {
+        grid-column: 1 / -1;
+    }
+
+    main {
+        padding: 0 var(--spacing-lg);
+    }
+
+    #proyectos,
+    #github {
+        padding: var(--spacing-xl);
+    }
+
+    #certificaciones {
+        padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .project_list,
+    .repo_list,
+    #multimedia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Sólo tablet: el menú desplegado se presenta en dos columnas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav_list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================================
+   ESCRITORIO (> 1024px)
+   ========================================================================== */
+@media (min-width: 1025px) {
+    .site_header {
+        grid-template-columns: 260px 1fr;
+        column-gap: 2.25rem;
+    }
+
+    .header_photo {
+        width: 260px;
+        height: 260px;
+    }
+
+    /* La navegación se muestra completa: se oculta el botón hamburguesa */
+    .menu_toggle {
+        display: none;
+    }
+
+    .site_nav .nav_list,
+    .js .site_nav .nav_list:not(.is_open) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem 0.8rem;
+        margin-top: 0;
+    }
+
+    .nav_list a {
+        padding: 0.5rem 1.1rem;
+    }
+
+    #multimedia,
+    .repo_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

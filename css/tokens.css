@@ -1,0 +1,85 @@
+/* ==========================================================================
+   tokens.css — Tokens de diseño (custom properties) y reset universal
+   ========================================================================== */
+
+/* 1. TOKENS DE DISEÑO — tema claro (por defecto) */
+:root {
+    /* Tokens obligatorios del enunciado */
+    --primary-color: #4a2f6b;
+    --secondary-color: #8a2c48;
+    --bg-color: #f7ede4;
+    --text-color: #2a2140;
+    --font-family-base: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+    --spacing-unit: 1rem;
+
+    /* Tokens de apoyo: superficies, bordes y énfasis */
+    --color-surface: #ffffff;
+    --color-text-muted: #6b5f7a;
+    --color-primary-dark: #2a1a40;
+
+    --color-periwinkle: #a99bdb;
+    --color-periwinkle-soft: #e4ddf7;
+    --color-border: #d8cdee;
+
+    --color-accent-soft: #c38d94;
+    --color-on-accent: #ffffff;
+
+    --color-rose: #c15a76;
+    --color-rose-soft: #f6dfe6;
+
+    --color-panel-dark: #1f1730;
+    --color-panel-text: #f3eefc;
+
+    --color-success: #2f7d4f;
+
+    /* Forma y elevación */
+    --radius: 8px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(31, 23, 48, 0.16);
+    --shadow-md: 0 10px 24px rgba(31, 23, 48, 0.20);
+    --shadow-lg: 0 18px 40px rgba(31, 23, 48, 0.26);
+
+    /* Escala de espaciado derivada de --spacing-unit */
+    --spacing-xs: calc(var(--spacing-unit) * 0.5);
+    --spacing-sm: calc(var(--spacing-unit) * 0.75);
+    --spacing-md: var(--spacing-unit);
+    --spacing-lg: calc(var(--spacing-unit) * 1.5);
+    --spacing-xl: calc(var(--spacing-unit) * 2);
+
+    /* Ancho máximo del contenido */
+    --content-width: 1100px;
+}
+
+/* 2. TOKENS — tema oscuro (se activa con <html data-theme="dark">) */
+:root[data-theme="dark"] {
+    --primary-color: #cbb8ec;
+    --secondary-color: #e0839a;
+    --bg-color: #1c1730;
+    --text-color: #f3eefc;
+
+    --color-surface: #2a2340;
+    --color-text-muted: #c9bfe0;
+    --color-primary-dark: #f3eefc;
+
+    --color-periwinkle: #453a70;
+    --color-periwinkle-soft: #332a52;
+    --color-border: #4a3e70;
+
+    --color-accent-soft: #8a2c48;
+    --color-on-accent: #1c1730;
+
+    --color-rose: #d98fa4;
+    --color-rose-soft: #3a1f28;
+
+    --color-panel-dark: #110d1e;
+    --color-panel-text: #f3eefc;
+
+    --color-success: #7fd1a0;
+}
+
+/* 3. RESET UNIVERSAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
